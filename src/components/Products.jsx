@@ -22,7 +22,6 @@ const productsList = [
   },
   {
     id: 4,
-    name: "Hard ",
     name: "Hard isk",
     price: 2300.00,
     image: "hard-disk.png",
@@ -57,7 +56,7 @@ export const Products = ({ addToCart }) => {
   return (
     <div className="col-md-12 products">
       {productsList.map((item, i) => (
-        <ProductItem key={i} item={item} addToCart={addToCart} />
+        <ProductItem key={i+1} item={item} addToCart={addToCart} />
       ))}
     </div>
   );

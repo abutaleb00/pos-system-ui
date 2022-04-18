@@ -7,12 +7,8 @@ import { ItemFilterOptions } from "./ItemFilterOptions";
 
 export const InvoiceItem = ({ products, removeFromCart }) => {
   let total = 0;
-  let subTotal = 0;
-  let qty = null;
     products?.forEach((p) => {
       total = parseFloat(total) + parseFloat(p.price) * parseFloat(p.qty);
-      subTotal = p.price.toFixed(2) * p.qty.toFixed(2);
-      qty = p.qty;
     });
   const submitOrder = () =>
     toast("The Order is Saved Successfully", {
@@ -72,7 +68,7 @@ export const InvoiceItem = ({ products, removeFromCart }) => {
       <table className="table">
         <tbody>
           <tr style={{ borderTop: "1px solid lightgrey" }}>
-            <td scope="row">Items</td>
+            <td>Items</td>
             <td className="text-end fw-bold">{products?.length}</td>
             <td>Total</td>
             <td className="text-end fw-bold">
@@ -80,7 +76,7 @@ export const InvoiceItem = ({ products, removeFromCart }) => {
             </td>
           </tr>
           <tr>
-            <td scope="row">Order Tax</td>
+            <td>Order Tax</td>
             <td className="text-end fw-bold">0.00</td>
             <td>Discount</td>
             <td className="text-end fw-bold">(0.00)0.00</td>
