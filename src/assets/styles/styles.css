@@ -10,7 +10,7 @@ body {
 .products {
     background: rgb(237, 237, 237);
     min-height: 550px;
-    height: 656px;
+    height: 640px;
     padding: 10px;
 }
 .product-item {
